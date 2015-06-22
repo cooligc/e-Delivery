@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.skc.problem</groupId>
+    <artifactId>E-DeliverySystem</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>mongo-unit</artifactId>
+  <name>MongoUnit for All Operation</name>
+  <description>MongoUnit for All Operation</description>
+  <version>1.0</version>
+
+</project>

@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.skc.problem</groupId>
+		<artifactId>E-DeliverySystem</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>Delivery-Payment</artifactId>
+	<name>Paypal Payment App</name>
+	<description>Paypal Payment App</description>
+	<version>1.0</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.paypal.sdk</groupId>
+			<artifactId>rest-api-sdk</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+
+	</dependencies>
+</project>

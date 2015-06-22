@@ -1,0 +1,84 @@
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <div th:include="extra/header"/>
+    <div class='container' id='content'>
+      
+      <div class='row pizza-row' th:unless="${message}">
+        <div class='span2'>
+          <div class='image'>
+            <a th:href="@{'/product/'+${product.name}}"><img th:src="@{${product.productUrl}}" /></a>
+          </div>
+          <div class='details'>
+            <span id="pName" th:text="${product.name}"/>
+            <span th:text="${product.description}"/>
+            <form th:action="@{/buy-now}" method="POST">
+              <input type="hidden" name="name" th:value="${product.name}"/>
+              <button type="submit" class="btn btn-default"> Buy Now</button>
+            </form>
+          </div>
+        </div>
+        </div>
+        
+        
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Comments</h3>
+        </div>
+        <div class="panel-body">
+            <ul >
+              <li class="alert pull-left" th:each="rating : ${product.ratings}"> 
+                <div  class="col-xs-6" th:text="${rating.comment}"/><span>(<span th:text="${rating.rating}"/>/5)</span>
+                <br clear="left"/>
+                 <span class="alert-info pull-right "> -- <span th:text="${rating.userName}"/> at <span th:text="${rating.commentTime}"/>
+                 </span>
+                 <hr/>
+                 <br clear="left"/>
+              </li>
+
+              
+            </ul>
+        </div>
+      </div>
+
+     <div class="row">
+          <div class="span6 offset3">
+           <form th:action="@{/rating}" th:object="${rating}" method="POST">
+              <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="5" id="comment" th:field="*{comment}" maxlength="255"></textarea>
+              </div>
+              <span id="character-count">255</span> characters remaining.
+              <input type="hidden" th:field="*{productName}" id="productName" th:value="${product.name}"/>
+              <div class="controls">
+                     <select class="select required" id="user_credit_card_expire_month" th:field="*{rating}">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                     </select>
+              </div>
+
+
+            <div class='form-actions'>
+               <input class="btn btn btn-primary" name="Comment" type="submit" value="Submit Comment" />
+            </div>
+
+           </form>
+          </div>
+      </div>
+        
+      <div class="row">
+          <div class="span6 offset3">
+            <p> This is a dummy application for e-Delivery System</p>
+            </div>
+      </div>
+   
+  
+ </div>
+</body>
+</html>

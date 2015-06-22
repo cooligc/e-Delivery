@@ -1,0 +1,42 @@
+<header>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/lib/bootstrap.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/lib/bootstrap-theme.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/lib/bootstrap-theme.min.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/application.css}" />
+	<script type="text/javascript" th:src="@{/js/application.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/e-delivery.js}"></script>
+</header>
+
+<div class='navbar navbar-static-top'>
+	<div class='navbar-inner'>
+		<div class='container'>
+			<a class='btn btn-navbar' data-target='.nav-collapse'
+				data-toggle='collapse'> <span class='icon-bar'></span> <span
+				class='icon-bar'></span> <span class='icon-bar'></span>
+			</a>
+			<ul class='nav pull-right'>
+                <li><a th:if="${#httpServletRequest.isUserInRole('ROLE_USER')}">Hello <span th:text="${request?.userPrincipal?.name}"/></a></li> 	
+                <li><a th:if="${#httpServletRequest.isUserInRole('ROLE_USER')}" th:href="@{/j_spring_security_logout}">SignOut</a></li>
+			  	<li><a th:unless="${#httpServletRequest.isUserInRole('ROLE_USER')}" th:href="@{/view-orders}">SignIn</a></li>
+			  	
+			</ul>
+			<a class='brand' th:href="@{/}">E-Delivery System</a>
+			<div class='nav-collapse'>
+				<ul class='nav'>
+					<li><a th:href="@{/}">Home</a></li>
+						<li><a th:href="@{/view-orders}">Orders</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='container' th:if="${message}">
+ 	<div class="alert fade in alert-error">
+ 	<ul>
+		<li th:text="${message}"></li> 
+	</ul>
+	</div>
+</div>
