@@ -17,12 +17,14 @@
 <li>Maven 3</li>
 <li>Application Server Like Tomcat or jBoss</li>
 <li>Mongo DB 2.4 or above</li>
+</ul>
 #How to run the application ?
 <hr/>
 <ul>
 <li>Build the Application using maven (mvn clien install)</li>
 <li>Run mongodb with default port (27017) (We can run, mongo on any port for that we need to change the port in mongo-config.xml file)</li>
 <li>Deploy the war in the Apllication Server</li>
+</ul>
 Now Test the Application by putting <code>http://localhost:8080</code> on your browser
 
 #Dummy Credit Card Details to be used while placing Order
