@@ -17,7 +17,7 @@
 		<spring-version>3.2.2.RELEASE</spring-version>
 		<mongo.version>2.10.1</mongo.version>
 		<spring.security.version>3.1.2.RELEASE</spring.security.version>
-		<spring.data.mongodb.version>1.7.1.RELEASE</spring.data.mongodb.version>
+		<spring.data.mongodb.version>1.0.1.RELEASE</spring.data.mongodb.version>
 	</properties>
 
 	<dependencies>
