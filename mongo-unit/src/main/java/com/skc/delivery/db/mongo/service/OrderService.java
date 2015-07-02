@@ -1,5 +1,6 @@
 package com.skc.delivery.db.mongo.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -57,7 +58,9 @@ public class OrderService {
 		Update update = new Update();
 		Set<Delivery> deliveries = order.getDelivery();
 		deliveries.add(delivery);
-		update.set("deliveries", deliveries);
+		List<Delivery> deliveriesData = new ArrayList<Delivery>();
+		deliveriesData.addAll(deliveries);
+		update.set("deliveries", deliveriesData);
 		update.set("status", status);
 		mongoOperations.updateMulti(new Query(Criteria.where("orderNumber").is(order.getOrderNumber())), update, Order.class);
 	}
