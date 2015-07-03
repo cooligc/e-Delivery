@@ -43,7 +43,7 @@ public class FBConnection {
 			LOGGER.error(e);
 		}
 		if(isOffline){
-			fbLoginUrl="http://localhost:8080/fb-dummy";
+			fbLoginUrl="http://ec2-52-27-192-20.us-west-2.compute.amazonaws.com/fb-dummy";
 		}
 		
 		return fbLoginUrl;
@@ -69,7 +69,7 @@ public class FBConnection {
 				if(!isOffline){
 					fbGraphURL = new URL(getFBGraphUrl(code));
 				}else{
-					fbGraphURL=new URL("http://localhost:8080/dummy-graph-url");
+					fbGraphURL=new URL("http://ec2-52-27-192-20.us-west-2.compute.amazonaws.com/dummy-graph-url");
 				}
 			} catch (MalformedURLException e) {
 				LOGGER.error(e);
