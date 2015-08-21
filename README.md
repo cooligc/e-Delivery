@@ -21,7 +21,7 @@
 #How to run the application ?
 <hr/>
 <ul>
-<li>Build the Application using maven (mvn clien install)</li>
+<li>Build the Application using maven (mvn clean install)</li>
 <li>Run mongodb with default port (27017) (We can run, mongo on any port for that we need to change the port in mongo-config.xml file)</li>
 <li>Deploy the war in the Apllication Server</li>
 </ul>
