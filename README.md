@@ -1,5 +1,6 @@
 # e-delivery
 
+<img src="https://travis-ci.org/cooligc/e-Delivery.svg?branch=master"/>
 #Technology used :
 <hr/>
 <ul>
