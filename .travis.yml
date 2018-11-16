@@ -9,3 +9,6 @@ jdk: openjdk7
 cache:
   directories:
     - '$HOME/.m2/repository'
+    
+notifications:
+   slack: common-poc:v9PPPYA9DzoBnBvgIDNJbmAQ
